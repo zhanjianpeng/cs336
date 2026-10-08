@@ -1,0 +1,468 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0
+rootdir: /home/zjp2025/cs336
+configfile: pyproject.toml
+plugins: jaxtyping-0.3.11, timeout-2.4.0
+collected 48 items
+
+tests/test_data.py::test_get_batch FAILED
+tests/test_model.py::test_linear FAILED
+tests/test_model.py::test_embedding FAILED
+tests/test_model.py::test_swiglu FAILED
+tests/test_model.py::test_scaled_dot_product_attention FAILED
+tests/test_model.py::test_4d_scaled_dot_product_attention FAILED
+tests/test_model.py::test_multihead_self_attention FAILED
+tests/test_model.py::test_multihead_self_attention_with_rope FAILED
+tests/test_model.py::test_transformer_lm FAILED
+tests/test_model.py::test_transformer_lm_truncated_input FAILED
+tests/test_model.py::test_transformer_block FAILED
+tests/test_model.py::test_rmsnorm FAILED
+tests/test_model.py::test_rope FAILED
+tests/test_model.py::test_silu_matches_pytorch FAILED
+tests/test_nn_utils.py::test_softmax_matches_pytorch FAILED
+tests/test_nn_utils.py::test_cross_entropy FAILED
+tests/test_nn_utils.py::test_gradient_clipping FAILED
+tests/test_optimizer.py::test_adamw FAILED
+tests/test_optimizer.py::test_get_lr_cosine_schedule FAILED
+tests/test_serialization.py::test_checkpointing FAILED
+tests/test_tokenizer.py::test_roundtrip_empty FAILED
+tests/test_tokenizer.py::test_empty_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_roundtrip_single_character FAILED
+tests/test_tokenizer.py::test_single_character_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_roundtrip_single_unicode_character FAILED
+tests/test_tokenizer.py::test_single_unicode_character_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_roundtrip_ascii_string FAILED
+tests/test_tokenizer.py::test_ascii_string_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_roundtrip_unicode_string FAILED
+tests/test_tokenizer.py::test_unicode_string_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_roundtrip_unicode_string_with_special_tokens FAILED
+tests/test_tokenizer.py::test_unicode_string_with_special_tokens_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_overlapping_special_tokens FAILED
+tests/test_tokenizer.py::test_address_roundtrip FAILED
+tests/test_tokenizer.py::test_address_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_german_roundtrip FAILED
+tests/test_tokenizer.py::test_german_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_tinystories_sample_roundtrip FAILED
+tests/test_tokenizer.py::test_tinystories_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_encode_special_token_trailing_newlines FAILED
+tests/test_tokenizer.py::test_encode_special_token_double_newline_non_whitespace FAILED
+tests/test_tokenizer.py::test_encode_iterable_tinystories_sample_roundtrip FAILED
+tests/test_tokenizer.py::test_encode_iterable_tinystories_matches_tiktoken FAILED
+tests/test_tokenizer.py::test_encode_iterable_memory_usage FAILED
+tests/test_tokenizer.py::test_encode_memory_usage XFAIL (Tokenizer.e...)
+tests/test_train_bpe.py::test_train_bpe_speed FAILED
+tests/test_train_bpe.py::test_train_bpe FAILED
+tests/test_train_bpe.py::test_train_bpe_special_tokens FAILED
+
+=================================== FAILURES ===================================
+________________________________ test_get_batch ________________________________
+tests/test_data.py:20: in test_get_batch
+    x, y = run_get_batch(
+tests/adapters.py:418: in run_get_batch
+    raise NotImplementedError
+E   NotImplementedError
+_________________________________ test_linear __________________________________
+tests/test_model.py:23: in test_linear
+    output = run_linear(
+tests/adapters.py:32: in run_linear
+    raise NotImplementedError
+E   NotImplementedError
+________________________________ test_embedding ________________________________
+tests/test_model.py:34: in test_embedding
+    output = run_embedding(
+tests/adapters.py:54: in run_embedding
+    raise NotImplementedError
+E   NotImplementedError
+_________________________________ test_swiglu __________________________________
+tests/test_model.py:46: in test_swiglu
+    actual_output = run_swiglu(
+tests/adapters.py:86: in run_swiglu
+    raise NotImplementedError
+E   NotImplementedError
+______________________ test_scaled_dot_product_attention _______________________
+tests/test_model.py:58: in test_scaled_dot_product_attention
+    actual_output = run_scaled_dot_product_attention(Q=q, K=k, V=v, mask=mask)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:107: in run_scaled_dot_product_attention
+    raise NotImplementedError
+E   NotImplementedError
+_____________________ test_4d_scaled_dot_product_attention _____________________
+tests/test_model.py:70: in test_4d_scaled_dot_product_attention
+    actual_output = run_scaled_dot_product_attention(Q=q, K=k, V=v, mask=mask)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:107: in run_scaled_dot_product_attention
+    raise NotImplementedError
+E   NotImplementedError
+________________________ test_multihead_self_attention _________________________
+tests/test_model.py:82: in test_multihead_self_attention
+    actual_output = run_multihead_self_attention(
+tests/adapters.py:141: in run_multihead_self_attention
+    raise NotImplementedError
+E   NotImplementedError
+___________________ test_multihead_self_attention_with_rope ____________________
+tests/test_model.py:102: in test_multihead_self_attention_with_rope
+    actual_output = run_multihead_self_attention_with_rope(
+tests/adapters.py:181: in run_multihead_self_attention_with_rope
+    raise NotImplementedError
+E   NotImplementedError
+_____________________________ test_transformer_lm ______________________________
+tests/test_model.py:122: in test_transformer_lm
+    actual_output = run_transformer_lm(
+tests/adapters.py:358: in run_transformer_lm
+    raise NotImplementedError
+E   NotImplementedError
+_____________________ test_transformer_lm_truncated_input ______________________
+tests/test_model.py:140: in test_transformer_lm_truncated_input
+    truncated_actual_output = run_transformer_lm(
+tests/adapters.py:358: in run_transformer_lm
+    raise NotImplementedError
+E   NotImplementedError
+____________________________ test_transformer_block ____________________________
+tests/test_model.py:161: in test_transformer_block
+    actual_output = run_transformer_block(
+tests/adapters.py:276: in run_transformer_block
+    raise NotImplementedError
+E   NotImplementedError
+_________________________________ test_rmsnorm _________________________________
+tests/test_model.py:181: in test_rmsnorm
+    actual_output = run_rmsnorm(d_model=d_model, eps=1e-5, weights=reference_weights, in_features=in_embeddings)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:381: in run_rmsnorm
+    raise NotImplementedError
+E   NotImplementedError
+__________________________________ test_rope ___________________________________
+tests/test_model.py:187: in test_rope
+    output = run_rope(
+tests/adapters.py:203: in run_rope
+    raise NotImplementedError
+E   NotImplementedError
+__________________________ test_silu_matches_pytorch ___________________________
+tests/test_model.py:201: in test_silu_matches_pytorch
+    actual_output = run_silu(x)
+                    ^^^^^^^^^^^
+tests/adapters.py:395: in run_silu
+    raise NotImplementedError
+E   NotImplementedError
+_________________________ test_softmax_matches_pytorch _________________________
+tests/test_nn_utils.py:18: in test_softmax_matches_pytorch
+    numpy.testing.assert_allclose(run_softmax(x, dim=-1).detach().numpy(), expected.detach().numpy(), atol=1e-5)
+                                  ^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:434: in run_softmax
+    raise NotImplementedError
+E   NotImplementedError
+______________________________ test_cross_entropy ______________________________
+tests/test_nn_utils.py:47: in test_cross_entropy
+    run_cross_entropy(inputs.view(-1, inputs.size(-1)), targets.view(-1)).detach().numpy(),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:452: in run_cross_entropy
+    raise NotImplementedError
+E   NotImplementedError
+____________________________ test_gradient_clipping ____________________________
+tests/test_nn_utils.py:79: in test_gradient_clipping
+    run_gradient_clipping(t1_c, max_norm)
+tests/adapters.py:464: in run_gradient_clipping
+    raise NotImplementedError
+E   NotImplementedError
+__________________________________ test_adamw __________________________________
+tests/test_optimizer.py:39: in test_adamw
+    actual_weights = _optimize(get_adamw_cls())
+                               ^^^^^^^^^^^^^^^
+tests/adapters.py:471: in get_adamw_cls
+    raise NotImplementedError
+E   NotImplementedError
+_________________________ test_get_lr_cosine_schedule __________________________
+tests/test_optimizer.py:86: in test_get_lr_cosine_schedule
+    run_get_lr_cosine_schedule(
+tests/adapters.py:499: in run_get_lr_cosine_schedule
+    raise NotImplementedError
+E   NotImplementedError
+______________________________ test_checkpointing ______________________________
+tests/test_serialization.py:64: in test_checkpointing
+    optimizer = get_adamw_cls()(
+                ^^^^^^^^^^^^^^^
+tests/adapters.py:471: in get_adamw_cls
+    raise NotImplementedError
+E   NotImplementedError
+_____________________________ test_roundtrip_empty _____________________________
+tests/test_tokenizer.py:78: in test_roundtrip_empty
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+_________________________ test_empty_matches_tiktoken __________________________
+tests/test_tokenizer.py:90: in test_empty_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+_______________________ test_roundtrip_single_character ________________________
+tests/test_tokenizer.py:108: in test_roundtrip_single_character
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+____________________ test_single_character_matches_tiktoken ____________________
+tests/test_tokenizer.py:120: in test_single_character_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+___________________ test_roundtrip_single_unicode_character ____________________
+tests/test_tokenizer.py:138: in test_roundtrip_single_unicode_character
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_single_unicode_character_matches_tiktoken ________________
+tests/test_tokenizer.py:150: in test_single_unicode_character_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+_________________________ test_roundtrip_ascii_string __________________________
+tests/test_tokenizer.py:165: in test_roundtrip_ascii_string
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+______________________ test_ascii_string_matches_tiktoken ______________________
+tests/test_tokenizer.py:177: in test_ascii_string_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+________________________ test_roundtrip_unicode_string _________________________
+tests/test_tokenizer.py:194: in test_roundtrip_unicode_string
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+_____________________ test_unicode_string_matches_tiktoken _____________________
+tests/test_tokenizer.py:206: in test_unicode_string_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+______________ test_roundtrip_unicode_string_with_special_tokens _______________
+tests/test_tokenizer.py:220: in test_roundtrip_unicode_string_with_special_tokens
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_unicode_string_with_special_tokens_matches_tiktoken ___________
+tests/test_tokenizer.py:235: in test_unicode_string_with_special_tokens_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+_______________________ test_overlapping_special_tokens ________________________
+tests/test_tokenizer.py:249: in test_overlapping_special_tokens
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+____________________________ test_address_roundtrip ____________________________
+tests/test_tokenizer.py:266: in test_address_roundtrip
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+________________________ test_address_matches_tiktoken _________________________
+tests/test_tokenizer.py:279: in test_address_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+____________________________ test_german_roundtrip _____________________________
+tests/test_tokenizer.py:295: in test_german_roundtrip
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+_________________________ test_german_matches_tiktoken _________________________
+tests/test_tokenizer.py:308: in test_german_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+______________________ test_tinystories_sample_roundtrip _______________________
+tests/test_tokenizer.py:324: in test_tinystories_sample_roundtrip
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+______________________ test_tinystories_matches_tiktoken _______________________
+tests/test_tokenizer.py:337: in test_tinystories_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+_________________ test_encode_special_token_trailing_newlines __________________
+tests/test_tokenizer.py:353: in test_encode_special_token_trailing_newlines
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_encode_special_token_double_newline_non_whitespace ____________
+tests/test_tokenizer.py:369: in test_encode_special_token_double_newline_non_whitespace
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+______________ test_encode_iterable_tinystories_sample_roundtrip _______________
+tests/test_tokenizer.py:384: in test_encode_iterable_tinystories_sample_roundtrip
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+______________ test_encode_iterable_tinystories_matches_tiktoken _______________
+tests/test_tokenizer.py:399: in test_encode_iterable_tinystories_matches_tiktoken
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+______________________ test_encode_iterable_memory_usage _______________________
+tests/test_tokenizer.py:421: in test_encode_iterable_memory_usage
+    tokenizer = get_tokenizer_from_vocab_merges_path(
+tests/test_tokenizer.py:74: in get_tokenizer_from_vocab_merges_path
+    return get_tokenizer(vocab, merges, special_tokens)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/adapters.py:562: in get_tokenizer
+    raise NotImplementedError
+E   NotImplementedError
+_____________________________ test_train_bpe_speed _____________________________
+tests/test_train_bpe.py:18: in test_train_bpe_speed
+    _, _ = run_train_bpe(
+tests/adapters.py:592: in run_train_bpe
+    raise NotImplementedError
+E   NotImplementedError
+________________________________ test_train_bpe ________________________________
+tests/test_train_bpe.py:29: in test_train_bpe
+    vocab, merges = run_train_bpe(
+tests/adapters.py:592: in run_train_bpe
+    raise NotImplementedError
+E   NotImplementedError
+________________________ test_train_bpe_special_tokens _________________________
+tests/test_train_bpe.py:71: in test_train_bpe_special_tokens
+    vocab, merges = run_train_bpe(
+tests/adapters.py:592: in run_train_bpe
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/test_data.py::test_get_batch - NotImplementedError
+FAILED tests/test_model.py::test_linear - NotImplementedError
+FAILED tests/test_model.py::test_embedding - NotImplementedError
+FAILED tests/test_model.py::test_swiglu - NotImplementedError
+FAILED tests/test_model.py::test_scaled_dot_product_attention - NotImplemente...
+FAILED tests/test_model.py::test_4d_scaled_dot_product_attention - NotImpleme...
+FAILED tests/test_model.py::test_multihead_self_attention - NotImplementedError
+FAILED tests/test_model.py::test_multihead_self_attention_with_rope - NotImpl...
+FAILED tests/test_model.py::test_transformer_lm - NotImplementedError
+FAILED tests/test_model.py::test_transformer_lm_truncated_input - NotImplemen...
+FAILED tests/test_model.py::test_transformer_block - NotImplementedError
+FAILED tests/test_model.py::test_rmsnorm - NotImplementedError
+FAILED tests/test_model.py::test_rope - NotImplementedError
+FAILED tests/test_model.py::test_silu_matches_pytorch - NotImplementedError
+FAILED tests/test_nn_utils.py::test_softmax_matches_pytorch - NotImplementedE...
+FAILED tests/test_nn_utils.py::test_cross_entropy - NotImplementedError
+FAILED tests/test_nn_utils.py::test_gradient_clipping - NotImplementedError
+FAILED tests/test_optimizer.py::test_adamw - NotImplementedError
+FAILED tests/test_optimizer.py::test_get_lr_cosine_schedule - NotImplementedE...
+FAILED tests/test_serialization.py::test_checkpointing - NotImplementedError
+FAILED tests/test_tokenizer.py::test_roundtrip_empty - NotImplementedError
+FAILED tests/test_tokenizer.py::test_empty_matches_tiktoken - NotImplementedE...
+FAILED tests/test_tokenizer.py::test_roundtrip_single_character - NotImplemen...
+FAILED tests/test_tokenizer.py::test_single_character_matches_tiktoken - NotI...
+FAILED tests/test_tokenizer.py::test_roundtrip_single_unicode_character - Not...
+FAILED tests/test_tokenizer.py::test_single_unicode_character_matches_tiktoken
+FAILED tests/test_tokenizer.py::test_roundtrip_ascii_string - NotImplementedE...
+FAILED tests/test_tokenizer.py::test_ascii_string_matches_tiktoken - NotImple...
+FAILED tests/test_tokenizer.py::test_roundtrip_unicode_string - NotImplemente...
+FAILED tests/test_tokenizer.py::test_unicode_string_matches_tiktoken - NotImp...
+FAILED tests/test_tokenizer.py::test_roundtrip_unicode_string_with_special_tokens
+FAILED tests/test_tokenizer.py::test_unicode_string_with_special_tokens_matches_tiktoken
+FAILED tests/test_tokenizer.py::test_overlapping_special_tokens - NotImplemen...
+FAILED tests/test_tokenizer.py::test_address_roundtrip - NotImplementedError
+FAILED tests/test_tokenizer.py::test_address_matches_tiktoken - NotImplemente...
+FAILED tests/test_tokenizer.py::test_german_roundtrip - NotImplementedError
+FAILED tests/test_tokenizer.py::test_german_matches_tiktoken - NotImplemented...
+FAILED tests/test_tokenizer.py::test_tinystories_sample_roundtrip - NotImplem...
+FAILED tests/test_tokenizer.py::test_tinystories_matches_tiktoken - NotImplem...
+FAILED tests/test_tokenizer.py::test_encode_special_token_trailing_newlines
+FAILED tests/test_tokenizer.py::test_encode_special_token_double_newline_non_whitespace
+FAILED tests/test_tokenizer.py::test_encode_iterable_tinystories_sample_roundtrip
+FAILED tests/test_tokenizer.py::test_encode_iterable_tinystories_matches_tiktoken
+FAILED tests/test_tokenizer.py::test_encode_iterable_memory_usage - NotImplem...
+FAILED tests/test_train_bpe.py::test_train_bpe_speed - NotImplementedError
+FAILED tests/test_train_bpe.py::test_train_bpe - NotImplementedError
+FAILED tests/test_train_bpe.py::test_train_bpe_special_tokens - NotImplemente...
+======================== 47 failed, 1 xfailed in 8.31s =========================

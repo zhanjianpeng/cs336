@@ -1,0 +1,161 @@
+{
+  "experiment": "TinyStories Byte-level BPE Tokenizer",
+  "timestamp_utc": "2026-10-08T08:30:29.218415+00:00",
+  "dataset": {
+    "path": "/home/zjp2025/cs336/data/TinyStoriesV2-GPT4-train-prefix-100MiB.txt",
+    "filename": "TinyStoriesV2-GPT4-train-prefix-100MiB.txt",
+    "size_bytes": 104857658,
+    "size_mib": 100.0
+  },
+  "used_subset": true,
+  "training": {
+    "target_vocab_size": 10000,
+    "actual_vocab_size": 10000,
+    "merge_count": 9743,
+    "special_tokens": [
+      "<|endoftext|>"
+    ],
+    "elapsed_seconds": 92.61698177806102
+  },
+  "serialization_validation": {
+    "vocab_equal": true,
+    "merges_equal": true,
+    "regular_encoding_equal": true,
+    "special_encoding_equal": true,
+    "decoding_equal": true,
+    "all_checks_passed": true
+  },
+  "special_token_validation": {
+    "special_token": "<|endoftext|>",
+    "token_ids": [
+      256
+    ],
+    "is_single_token": true,
+    "decoded": "<|endoftext|>",
+    "roundtrip_equal": true,
+    "passed": true
+  },
+  "longest_token": {
+    "token_id": 9591,
+    "length_bytes": 17,
+    "bytes_hex": "20656e74687573696173746963616c6c79",
+    "decoded_text": " enthusiastically"
+  },
+  "encoding_examples": {
+    "english": {
+      "original_text": "Once upon a time, there was a little girl who loved reading stories.",
+      "token_ids": [
+        429,
+        438,
+        259,
+        398,
+        44,
+        401,
+        283,
+        259,
+        391,
+        475,
+        659,
+        502,
+        3833,
+        2099,
+        46
+      ],
+      "num_tokens": 15,
+      "decoded_text": "Once upon a time, there was a little girl who loved reading stories.",
+      "roundtrip_equal": true
+    },
+    "chinese": {
+      "original_text": "从前有一个小女孩，她很喜欢读故事。",
+      "token_ids": [
+        228,
+        187,
+        142,
+        229,
+        137,
+        141,
+        230,
+        156,
+        137,
+        228,
+        184,
+        128,
+        228,
+        184,
+        170,
+        229,
+        176,
+        143,
+        229,
+        165,
+        179,
+        229,
+        173,
+        169,
+        239,
+        188,
+        140,
+        229,
+        165,
+        185,
+        229,
+        190,
+        136,
+        229,
+        150,
+        156,
+        230,
+        172,
+        162,
+        232,
+        175,
+        187,
+        230,
+        149,
+        133,
+        228,
+        186,
+        139,
+        227,
+        128,
+        130
+      ],
+      "num_tokens": 51,
+      "decoded_text": "从前有一个小女孩，她很喜欢读故事。",
+      "roundtrip_equal": true
+    },
+    "special_token": {
+      "original_text": "This is the first story.<|endoftext|>This is the second story.",
+      "token_ids": [
+        1544,
+        433,
+        263,
+        1185,
+        1002,
+        46,
+        256,
+        1544,
+        433,
+        263,
+        4716,
+        1002,
+        46
+      ],
+      "num_tokens": 13,
+      "decoded_text": "This is the first story.<|endoftext|>This is the second story.",
+      "roundtrip_equal": true
+    }
+  },
+  "output_files": {
+    "vocab": "/home/zjp2025/cs336/artifacts/tinystories_tokenizer/vocab.json",
+    "merges": "/home/zjp2025/cs336/artifacts/tinystories_tokenizer/merges.json",
+    "experiment_json": "/home/zjp2025/cs336/artifacts/tinystories_tokenizer/experiment.json",
+    "experiment_markdown": "/home/zjp2025/cs336/artifacts/tinystories_tokenizer/experiment.md"
+  },
+  "environment": {
+    "python_version": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:46:43) [GCC 14.3.0]",
+    "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "cpu_count": 80
+  },
+  "notes": "Source: https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStoriesV2-GPT4-train.txt. Selection: file prefix through the first complete <|endoftext|> line at or after 104857600 bytes, preserving original document order. Actual size: 104857658 bytes; complete documents: 127994. SHA256: 98d20772fd58201a12b5a021d4987b64e2bc360e3200bfc3591283e15dd11a00. This experiment uses a training subset, not the full training file."
+}

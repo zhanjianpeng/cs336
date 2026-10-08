@@ -1,0 +1,16 @@
+Environment verification (2026-09-23)
+Conda environment: cs336
+Python: 3.12.14
+PyTorch: 2.11.0+cu126
+PyTorch CUDA runtime: 12.6
+NVIDIA driver: 570.133.07
+Visible GPUs: 4 x NVIDIA GeForce RTX 3090 (24576 MiB each)
+torch.cuda.is_available(): True
+GPU matrix multiplication: passed (2x2 ones @ ones = 2x2 twos)
+python -m pip check: No broken requirements found.
+
+Initial official tests:
+python -m pytest --tb=short
+47 failed, 1 xfailed in 8.31s
+See pytest-baseline.txt for full output.
+This is the unimplemented starter baseline, not a completed assignment result.

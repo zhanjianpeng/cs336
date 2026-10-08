@@ -1,0 +1,105 @@
+
+======================================================================
+TinyStories BPE Tokenizer Training
+======================================================================
+Input file: /home/zjp2025/cs336/data/TinyStoriesV2-GPT4-train-prefix-100MiB.txt
+Dataset size: 100.0 MiB
+Target vocab size: 10000
+Special token: <|endoftext|>
+Using subset: True
+Output directory: /home/zjp2025/cs336/artifacts/tinystories_tokenizer
+
+Training tokenizer...
+
+Training finished.
+Elapsed time: 92.617 seconds
+Actual vocab size: 10000
+Number of merges: 9743
+
+Saving tokenizer...
+Saved vocab to: artifacts/tinystories_tokenizer/vocab.json
+Saved merges to: artifacts/tinystories_tokenizer/merges.json
+
+Reloading tokenizer from disk...
+
+======================================================================
+Serialization Validation
+======================================================================
+vocab_equal: True
+merges_equal: True
+regular_encoding_equal: True
+special_encoding_equal: True
+decoding_equal: True
+all_checks_passed: True
+
+======================================================================
+Special Token Validation
+======================================================================
+Encoded IDs: [256]
+Single token: True
+Decoded: <|endoftext|>
+
+======================================================================
+Encode / Decode Examples
+======================================================================
+
+[english]
+Original:
+Once upon a time, there was a little girl who loved reading stories.
+
+Token IDs:
+[429, 438, 259, 398, 44, 401, 283, 259, 391, 475, 659, 502, 3833, 2099, 46]
+
+Number of tokens: 15
+
+Decoded:
+Once upon a time, there was a little girl who loved reading stories.
+
+Round-trip equal: True
+----------------------------------------------------------------------
+
+[chinese]
+Original:
+从前有一个小女孩，她很喜欢读故事。
+
+Token IDs:
+[228, 187, 142, 229, 137, 141, 230, 156, 137, 228, 184, 128, 228, 184, 170, 229, 176, 143, 229, 165, 179, 229, 173, 169, 239, 188, 140, 229, 165, 185, 229, 190, 136, 229, 150, 156, 230, 172, 162, 232, 175, 187, 230, 149, 133, 228, 186, 139, 227, 128, 130]
+
+Number of tokens: 51
+
+Decoded:
+从前有一个小女孩，她很喜欢读故事。
+
+Round-trip equal: True
+----------------------------------------------------------------------
+
+[special_token]
+Original:
+This is the first story.<|endoftext|>This is the second story.
+
+Token IDs:
+[1544, 433, 263, 1185, 1002, 46, 256, 1544, 433, 263, 4716, 1002, 46]
+
+Number of tokens: 13
+
+Decoded:
+This is the first story.<|endoftext|>This is the second story.
+
+Round-trip equal: True
+----------------------------------------------------------------------
+
+======================================================================
+Longest Vocabulary Token
+======================================================================
+Token ID: 9591
+Length: 17 bytes
+Decoded: ' enthusiastically'
+
+======================================================================
+All checks passed!
+======================================================================
+
+Vocabulary: artifacts/tinystories_tokenizer/vocab.json
+Merges: artifacts/tinystories_tokenizer/merges.json
+Experiment JSON: artifacts/tinystories_tokenizer/experiment.json
+Experiment Markdown: artifacts/tinystories_tokenizer/experiment.md
