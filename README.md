@@ -7,7 +7,9 @@
 ## 课程作业进度
 
 Week 1 已完成：自行实现 byte-level BPE 训练、Tokenizer 编码和解码、特殊 token、
-流式编码，以及 tokenizer 保存和加载。Week 2 的 Transformer 与 Week 3 的模型训练尚待完成。
+流式编码，以及 tokenizer 保存和加载。
+Week 2 已完成模型实现与测试：基础层、SwiGLU、RoPE、Softmax、缩放点积注意力、
+多头因果自注意力、Transformer Block 和 Transformer LM。Week 3 的训练组件与模型训练尚待完成。
 
 官方骨架来自 [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics)，
 导入提交为 `a158843b20107949f1a8d7df1b05cd33b9166712`。
@@ -17,6 +19,10 @@ Week 1 已完成：自行实现 byte-level BPE 训练、Tokenizer 编码和解�
 
 - `cs336_basics/bpe.py`：BPE vocabulary training。
 - `cs336_basics/tokenizer.py`：Tokenizer 及保存、加载功能。
+- `cs336_basics/layers.py`：Linear、Embedding、RMSNorm、SiLU、SwiGLU 和 RoPE。
+- `cs336_basics/nn_utils.py`：数值稳定的 Softmax。
+- `cs336_basics/attention.py`：缩放点积注意力及支持可选 RoPE 的多头因果自注意力。
+- `cs336_basics/transformer.py`：Transformer Block 和 Transformer LM。
 - `scripts/train_tokenizer.py`：训练和实验验证入口。
 - `tests/`：官方测试、fixtures 和连接实现的 adapters。
 - `reports/`：环境记录、测试结果和训练日志。
@@ -34,7 +40,33 @@ python -m pytest tests/test_train_bpe.py tests/test_tokenizer.py
 Week 1 实测结果：**27 passed, 1 xfailed**。
 `xfailed` 是官方预期失败的整段编码内存测试。
 完整结果见 [reports/pytest-week1.txt](./reports/pytest-week1.txt)。
-全套作业测试使用 `python -m pytest`，尚未实现的 Week 2 / Week 3 功能仍会失败。
+全套作业测试使用 `python -m pytest`，尚未实现的 Week 3 功能仍会失败。
+
+### Week 2 模型验收
+
+在 Conda 环境 `cs336` 中运行全部模型测试和 Softmax 测试：
+
+```bash
+python -m pytest tests/test_model.py tests/test_nn_utils.py::test_softmax_matches_pytorch -v --tb=short
+```
+
+本次结果：**14 passed in 0.35s**。
+完整日志见 [reports/pytest-week2.txt](./reports/pytest-week2.txt)。
+测试覆盖基础层、三维和四维缩放点积注意力、无 RoPE 和带 RoPE 的多头注意力、
+Transformer Block，以及完整输入和截短输入的 Transformer LM。
+
+主要模块的输入和输出形状：
+
+| 模块 | 输入 | 输出 |
+| --- | --- | --- |
+| Linear | `(..., in_features)` | `(..., out_features)` |
+| Embedding | `(...)` 的整数 token ID | `(..., embedding_dim)` |
+| Transformer Block | `(..., seq_len, d_model)` | `(..., seq_len, d_model)` |
+| Transformer LM | `(batch_size, seq_len)` 的整数 token ID | `(batch_size, seq_len, vocab_size)` 的未归一化 logits |
+
+Transformer LM 支持 `seq_len <= context_length`。
+本地模型的构造参数 `theta` 对应官方 adapter 的 `rope_theta`；
+`tests/adapters.py` 负责官方接口与本地模块参数名称的映射。
 
 ### 复现 TinyStories tokenizer 实验
 
