@@ -1,0 +1,24 @@
+Command exited with non-zero status 1
+	Command being timed: "/home/zjp2025/miniconda3/envs/cs336/bin/python -u -m scripts.train --train-data data/tinystories/train.npy --valid-data data/tinystories/valid.npy --output-dir checkpoints/tinystories-gpu-smoke --vocab-size 10000 --context-length 256 --d-model 512 --num-layers 4 --num-heads 16 --d-ff 1344 --rope-theta 10000 --batch-size 32 --max-steps 10 --max-lr 0.001 --min-lr 0.0001 --warmup-steps 200 --cosine-cycle-steps 5000 --beta1 0.9 --beta2 0.95 --eps 1e-8 --weight-decay 0.1 --max-grad-norm 1.0 --log-interval 2 --eval-interval 10 --eval-batches 2 --checkpoint-interval 5000 --device cuda:0 --seed 42"
+	User time (seconds): 1.90
+	System time (seconds): 0.25
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 549988
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 68256
+	Voluntary context switches: 90
+	Involuntary context switches: 85
+	Swaps: 0
+	File system inputs: 696
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

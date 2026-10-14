@@ -1,0 +1,5 @@
+PASS: temperature, minimal nucleus, threshold-crossing token, renormalization, and vocabulary ID mapping
+PASS: 100 exact-threshold cases, top_p=1 small positive probabilities, and large finite logits
+PASS: invalid temperature and top_p values are rejected
+PASS: overlong prompt cropping, full history preservation, EOS termination, eval mode, and no gradients
+PASS: zero generation length, exact token limit, and empty-prompt rejection

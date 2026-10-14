@@ -1,0 +1,7 @@
+PASS: nucleus membership, inclusion of the threshold-crossing token, renormalization, and mapping back to vocabulary IDs.
+PASS: large finite logits produce a valid sampling distribution.
+PASS: temperature scaling matches the reference distribution.
+FAIL: when top_p equals the largest token probability, the implementation can retain an additional token due to cancellation in cumulative_probs - sorted_probs.
+{"trial": 1, "logits": [0.9827314615249634, 0.3066132068634033, 2.342454671859741, 0.026834707707166672, 1.3829506635665894, 0.1444249004125595, -0.16967667639255524], "top_p": 0.48515263199806213, "sorted_probabilities": [0.48515263199806213, 0.18585364520549774, 0.12455412745475769, 0.06334665417671204, 0.05386245995759964, 0.04788697510957718, 0.03934355080127716], "actual_nucleus": [0.7230225205421448, 0.2769775092601776, 0.0, 0.0, 0.0, 0.0, 0.0]}
+FAIL: top_p=1.0 drops positive low-probability tokens after cumulative probability rounds to 1.
+{"top_p_1_actual_distribution": [1.0, 0.0, 0.0]}

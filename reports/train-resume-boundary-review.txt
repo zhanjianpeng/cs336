@@ -1,0 +1,4 @@
+PASS: max_steps=4 rejects a step-10 checkpoint with a clear error and creates no final checkpoint.
+PASS: max_steps=10 performs no additional updates and preserves iteration, model, and optimizer states.
+PASS: max_steps=12 continues through steps 11 and 12 with the expected learning rate and optimizer states.
+PASS: source checkpoint remains unchanged.

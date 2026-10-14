@@ -1,0 +1,15 @@
+Device: cuda:0
+Train tokens: 22,914,183
+Valid tokens: 2,555,892
+Model parameters: 22,696,448
+{"step": 2, "train_loss": 9.25316333770752, "lr": 5e-06, "tokens_per_second": 22536.082596741307}
+{"step": 4, "train_loss": 9.234926223754883, "lr": 1.5e-05, "tokens_per_second": 69426.1913625096}
+{"step": 6, "train_loss": 9.203686714172363, "lr": 2.5e-05, "tokens_per_second": 69013.90582902243}
+{"step": 8, "train_loss": 9.149720191955566, "lr": 3.5000000000000004e-05, "tokens_per_second": 70856.6854921052}
+{"step": 10, "train_loss": 9.061103820800781, "lr": 4.4999999999999996e-05, "tokens_per_second": 71047.55747951598}
+{"step": 10, "valid_loss": 8.994728088378906}
+{"step": 10, "final_valid_loss": 8.997902870178223}
+Training complete.
+Final checkpoint: checkpoints/tinystories-gpu-smoke/checkpoint_final.pt
+Training time: 2.23 seconds
+Tokens processed this run: 81,920

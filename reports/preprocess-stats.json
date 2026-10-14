@@ -1,0 +1,16 @@
+{
+  "input_path": "data/TinyStoriesV2-GPT4-train-prefix-100MiB.txt",
+  "vocab_size": 10000,
+  "special_token": "<|endoftext|>",
+  "valid_ratio": 0.1,
+  "seed": 42,
+  "dtype": "uint16",
+  "train": {
+    "stories": 115195,
+    "tokens": 22914183
+  },
+  "valid": {
+    "stories": 12799,
+    "tokens": 2555892
+  }
+}

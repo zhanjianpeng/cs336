@@ -1,0 +1,11 @@
+Device: cuda:0
+Train tokens: 22,914,183
+Valid tokens: 2,555,892
+Model parameters: 22,696,448
+Resumed from checkpoint: checkpoints/tinystories-baseline/checkpoint_final.pt
+Starting from step: 5000
+{"step": 5000, "final_valid_loss": 1.6969213485717773}
+Training complete.
+Final checkpoint: checkpoints/tinystories-evaluation/checkpoint_final.pt
+Training time: 1.03 seconds
+Tokens processed this run: 0

@@ -1,0 +1,13 @@
+device: cpu
+context length: 256
+EOT token id: 256
+loaded checkpoint from training step 5000
+
+================================================================================
+GENERATION
+================================================================================
+Lily found a small puppy in the garden. She was very happy and wanted to play with it. She picked up the puppy and ran around the garden. The puppy was very fast and jumped up and down.
+Lily played with the puppy all day. She would run, jump, and chase it. She was so glad she made it so much that she had so much fun. When the sun went down, the puppy went back home. Lily was tired but happy. She knew that she had made a new friend.
+
+================================================================================
+prompt tokens: 9 | generated tokens: 97 | temperature: 0.8 | top_p: 0.9

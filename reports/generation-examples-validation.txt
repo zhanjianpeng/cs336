@@ -1,0 +1,5 @@
+PASS: story-1: prompt=4 tokens; generated=138; limit=192.
+PASS: story-2: prompt=9 tokens; generated=97; limit=192.
+PASS: long-context: prompt=300 tokens; generated=16; limit=16.
+PASS: zero-length: prompt=3 tokens; generated=0; limit=0.
+PASS: actual checkpoint loading, prompt continuation, token limits, long-context generation, and zero-length generation.

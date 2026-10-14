@@ -1,0 +1,14 @@
+Device: cpu
+Train tokens: 22,914,183
+Valid tokens: 2,555,892
+Model parameters: 656,480
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/zjp2025/cs336/scripts/train.py", line 1183, in <module>
+    main()
+  File "/home/zjp2025/cs336/scripts/train.py", line 1177, in main
+    train(
+  File "/home/zjp2025/cs336/scripts/train.py", line 812, in train
+    raise ValueError(
+ValueError: Checkpoint has 10 completed steps, but max_steps is 4. max_steps is the total training step limit; increase it to resume training.

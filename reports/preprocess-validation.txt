@@ -1,0 +1,3 @@
+PASS: train: 115,195 stories; 22,914,183 tokens; dtype=uint16; IDs=[10, 9999]; EOT count=115,195.
+PASS: valid: 12,799 stories; 2,555,892 tokens; dtype=uint16; IDs=[10, 9999]; EOT count=12,799.
+PASS: source SHA256, complete-story partition metadata, array hashes, and memory-mapped batch sampling. Reports saved.

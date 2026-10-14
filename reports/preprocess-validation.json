@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "input_path": "data/TinyStoriesV2-GPT4-train-prefix-100MiB.txt",
+    "vocab_size": 10000,
+    "special_token": "<|endoftext|>",
+    "valid_ratio": 0.1,
+    "seed": 42,
+    "dtype": "uint16",
+    "train": {
+      "stories": 115195,
+      "tokens": 22914183
+    },
+    "valid": {
+      "stories": 12799,
+      "tokens": 2555892
+    }
+  },
+  "source_files": {
+    "data/TinyStoriesV2-GPT4-train-prefix-100MiB.txt": {
+      "sha256": "98d20772fd58201a12b5a021d4987b64e2bc360e3200bfc3591283e15dd11a00",
+      "bytes": 104857658
+    },
+    "artifacts/tinystories_tokenizer/vocab.json": {
+      "sha256": "9049075fc7ac330b191aa227332da117b42d0be300d1ee48bf2a236879cbfa62",
+      "bytes": 254616
+    },
+    "artifacts/tinystories_tokenizer/merges.json": {
+      "sha256": "3da23b4bc3a941e1adda5789410ff2f4d6f2f61415af747f9941410e6294f7e8",
+      "bytes": 349020
+    },
+    "scripts/prepare_data.py": {
+      "sha256": "073a0e28c03c773280ff4a19fa351b92afd464586a384904c12186fa67e2eabc",
+      "bytes": 11649
+    },
+    "cs336_basics/tokenizer.py": {
+      "sha256": "aaf847066cdfa773c95f098fb346c4fd6320bffbb1925f2e6870ba78deba2a0e",
+      "bytes": 12420
+    }
+  },
+  "outputs": {
+    "train": {
+      "path": "data/tinystories/train.npy",
+      "shape": [
+        22914183
+      ],
+      "dtype": "uint16",
+      "min_id": 10,
+      "max_id": 9999,
+      "eot_count": 115195,
+      "bytes": 45828494,
+      "sha256": "eaed8fdd802d89c65641aff87df4f6996eca9e11b83c797c7befc0c975dd1564"
+    },
+    "valid": {
+      "path": "data/tinystories/valid.npy",
+      "shape": [
+        2555892
+      ],
+      "dtype": "uint16",
+      "min_id": 10,
+      "max_id": 9999,
+      "eot_count": 12799,
+      "bytes": 5111912,
+      "sha256": "a5fd345e372beaa5bf1c38c95381960ed4e422f4f40935f1e6f6e03aedbfcf9d"
+    }
+  },
+  "checks": {
+    "source_story_count": true,
+    "split_indices_disjoint_and_exhaustive": true,
+    "train": {
+      "memory_mapped": true,
+      "shape_and_dtype": true,
+      "token_id_range": true,
+      "eot_count_matches_stories": true,
+      "first_three_and_final_stories_match_source_partition": true,
+      "get_batch_integration": true
+    },
+    "valid": {
+      "memory_mapped": true,
+      "shape_and_dtype": true,
+      "token_id_range": true,
+      "eot_count_matches_stories": true,
+      "first_three_and_final_stories_match_source_partition": true,
+      "get_batch_integration": true
+    }
+  }
+}

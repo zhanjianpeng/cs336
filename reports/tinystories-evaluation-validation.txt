@@ -1,0 +1,1 @@
+PASS: README evaluation command computes validation loss with zero training updates, retains iteration 5000 and identical model/optimizer states, and leaves the source checkpoint unchanged.

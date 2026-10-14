@@ -1,0 +1,3 @@
+PASS: 10 CPU training steps, finite training/validation losses, configuration, periodic checkpoints, and matching final optimizer step counts.
+PASS: resume from step 10 completes only steps 11 and 12, updates model weights, and retains optimizer states.
+FAIL: a checkpoint with 10 completed steps is accepted with max_steps=4. The saved iteration becomes 4 while optimizer step counts remain 10, and the log reports a negative token count.

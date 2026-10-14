@@ -12,12 +12,14 @@ conda create -n cs336 python=3.12 pip -y
 conda activate cs336
 python -m pip install --no-cache-dir --no-deps torch==2.11.0 --index-url https://download.pytorch.org/whl/cu126
 python -m pip install --no-cache-dir -e . uv --index-url https://pypi.org/simple
+python -m pip install --no-cache-dir matplotlib==3.11.2
 python -m pip check
 ```
 
 PyTorch 使用官方 CUDA 12.6 wheel；版本符合项目的 `torch~=2.11.0` 要求。
 安装方法参考：https://pytorch.org/get-started/previous-versions/#v2-11-0
 其余依赖根据 `pyproject.toml` 安装，实际版本记录在 `reports/environment-freeze.txt`。
+Matplotlib 用于导出训练损失曲线。
 主包单独安装、依赖从 PyPI 补齐，是为了绕过本机访问 NVIDIA 包索引时的 SSL 连接中断。
 两个安装步骤均须完成，不能只执行 `--no-deps` 那一步。
 这不是对官方 `uv.lock` 的逐项复现：官方锁文件的 Linux CUDA 依赖与本机所选构建不同。

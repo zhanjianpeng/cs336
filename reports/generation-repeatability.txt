@@ -1,0 +1,1 @@
+PASS: identical checkpoint, prompt, sampling arguments, seed, and CPU device produce byte-identical CLI output.

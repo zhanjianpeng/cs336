@@ -1,0 +1,4 @@
+PASS: all 5,000 training steps logged at the configured interval; training and validation losses are finite.
+PASS: final checkpoint contains 22,696,448 parameters, iteration 5,000, and matching AdamW step counts.
+PASS: restored checkpoint reaches iteration 5,001, updates parameters, and retains finite optimizer states and the expected learning rate.
+PASS: loss curves exported to PNG and PDF; configuration, metrics CSV, and summary JSON saved.

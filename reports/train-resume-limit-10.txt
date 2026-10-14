@@ -1,0 +1,11 @@
+Device: cpu
+Train tokens: 22,914,183
+Valid tokens: 2,555,892
+Model parameters: 656,480
+Resumed from checkpoint: /home/zjp2025/cs336/checkpoints/train-smoke/checkpoint_final.pt
+Starting from step: 10
+{"step": 10, "final_valid_loss": 9.195611953735352}
+Training complete.
+Final checkpoint: /tmp/cs336-resume-boundary-vf1z0tdx/10/checkpoint_final.pt
+Training time: 0.03 seconds
+Tokens processed this run: 0

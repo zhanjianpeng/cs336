@@ -1,0 +1,23 @@
+Device: cpu
+Train tokens: 22,914,183
+Valid tokens: 2,555,892
+Model parameters: 656,480
+{"step": 1, "train_loss": 9.202574729919434, "lr": 0.0, "tokens_per_second": 707.9419367604107}
+{"step": 2, "train_loss": 9.208613395690918, "lr": 0.0005, "tokens_per_second": 1216.396899028093}
+{"step": 3, "train_loss": 9.211658477783203, "lr": 0.001, "tokens_per_second": 1285.6593076235997}
+{"step": 4, "train_loss": 9.199827194213867, "lr": 0.0009931634888554937, "tokens_per_second": 1124.9300614753095}
+{"step": 5, "train_loss": 9.209348678588867, "lr": 0.0009728616793536588, "tokens_per_second": 1845.9562180012456}
+{"step": 5, "valid_loss": 9.193643569946289}
+Saved checkpoint: /home/zjp2025/cs336/checkpoints/train-smoke/checkpoint_0000005.pt
+{"step": 6, "train_loss": 9.219560623168945, "lr": 0.0009397114317029975, "tokens_per_second": 934.3916342268358}
+{"step": 7, "train_loss": 9.207559585571289, "lr": 0.00089471999940354, "tokens_per_second": 2079.0744640318057}
+{"step": 8, "train_loss": 9.187270164489746, "lr": 0.0008392544243589427, "tokens_per_second": 1905.2336903497308}
+{"step": 9, "train_loss": 9.191627502441406, "lr": 0.0007750000000000001, "tokens_per_second": 1153.110268661888}
+{"step": 10, "train_loss": 9.221785545349121, "lr": 0.0007039090644965511, "tokens_per_second": 1537.8695250549654}
+{"step": 10, "valid_loss": 9.190897941589355}
+Saved checkpoint: /home/zjp2025/cs336/checkpoints/train-smoke/checkpoint_0000010.pt
+{"step": 10, "final_valid_loss": 9.207685470581055}
+Training complete.
+Final checkpoint: /home/zjp2025/cs336/checkpoints/train-smoke/checkpoint_final.pt
+Training time: 0.29 seconds
+Tokens processed this run: 320

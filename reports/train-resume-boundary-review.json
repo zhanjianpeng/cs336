@@ -1,0 +1,32 @@
+{
+  "all_passed": true,
+  "source_checkpoint_unchanged": true,
+  "cases": [
+    {
+      "checkpoint_iteration": 10,
+      "max_steps": 4,
+      "return_code": 1,
+      "rejected": true,
+      "passed": true
+    },
+    {
+      "checkpoint_iteration": 10,
+      "max_steps": 10,
+      "return_code": 0,
+      "saved_iteration": 10,
+      "training_steps": [],
+      "passed": true
+    },
+    {
+      "checkpoint_iteration": 10,
+      "max_steps": 12,
+      "return_code": 0,
+      "saved_iteration": 12,
+      "training_steps": [
+        11,
+        12
+      ],
+      "passed": true
+    }
+  ]
+}

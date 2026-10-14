@@ -1,0 +1,14 @@
+device: cpu
+context length: 256
+EOT token id: 256
+loaded checkpoint from training step 5000
+
+================================================================================
+GENERATION
+================================================================================
+Once upon a time, there was a little girl named Lily. She had a big toy box with a lock. Lily loved her toys very much. One day, she wanted to make her toys into a fun toy box.
+Lily started to unpack her toys. But then, she heard a loud noise coming from the toy box. Lily was scared and didn't know what to do. She thought the toy box would be a surprise.
+Lily's mom came into the room and saw the toy box. She knew it was not her toy. But she said, "Lily, please be careful. The toy box is broken." Lily was very happy and promised to be more careful with her toys.
+
+================================================================================
+prompt tokens: 4 | generated tokens: 138 | temperature: 0.8 | top_p: 0.9

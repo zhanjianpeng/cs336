@@ -1,0 +1,2 @@
+PASS: real CLI, complete-story 9:1 split, disjoint train/validation stories, English/Chinese round trip, EOT token counts, uint16 memory-mapped arrays, ID ranges, and get_batch integration.
+PASS: identical seeds yield byte-identical arrays and statistics; a different seed changes the split.
